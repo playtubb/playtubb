@@ -2,50 +2,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlayTubb – Video Platform for India</title>
+  <title>PlayTubb.app – Video Platform for India</title>
+  <meta name="description" content="PlayTubb.app – Watch, Upload, Grow. Hindi & Indian creators ke liye modern video sharing platform." />
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
-    body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#fff;}
-    header {padding:60px 20px;text-align:center;background:linear-gradient(135deg,#2563eb,#1e40af);}    
-    header h1 {font-size:48px;margin-bottom:10px;}
-    header p {font-size:18px;opacity:0.9;}
-    section {padding:50px 20px;max-width:1100px;margin:auto;}
-    .features {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
-    .card {background:#020617;padding:25px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.4);}    
-    .card h3 {margin-top:0;color:#38bdf8;}
-    .cta {text-align:center;padding:60px 20px;background:#020617;}
-    .cta button {padding:14px 30px;font-size:18px;border:none;border-radius:30px;background:#2563eb;color:#fff;cursor:pointer;}
-    footer {text-align:center;padding:20px;font-size:14px;opacity:.7;}
+    :root{
+      --bg:#0b1020;
+      --card:#0f172a;
+      --pri:#7c3aed;
+      --pri2:#ec4899;
+      --txt:#e5e7eb;
+      --mut:#9ca3af;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(1200px 600px at 10% -10%, #1f1147, transparent),radial-gradient(1200px 600px at 110% 10%, #3b0a2a, transparent),var(--bg);color:var(--txt)}
+    a{color:inherit;text-decoration:none}
+    header{position:relative;overflow:hidden}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;max-width:1200px;margin:auto;padding:64px 20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:56px;width:56px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+    .brand h1{font-size:44px;line-height:1.1;margin:0}
+    .tag{margin:10px 0 18px;color:var(--mut)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:14px 22px;border-radius:14px;font-weight:600;background:linear-gradient(135deg,var(--pri),var(--pri2));border:none;color:white;box-shadow:0 12px 30px rgba(124,58,237,.35)}
+    .btn.out{background:transparent;border:1px solid rgba(255,255,255,.18)}
+    .cover{width:100%;border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+    section{max-width:1200px;margin:auto;padding:56px 20px}
+    h2{font-size:34px;margin:0 0 10px}
+    p{color:var(--mut)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px}
+    .card h3{margin:0 0 6px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(124,58,237,.15);color:#ddd;border:1px solid rgba(124,58,237,.35);font-size:12px}
+    .list li{margin:8px 0;color:var(--mut)}
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:28px 20px;text-align:center;color:var(--mut)}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.brand h1{font-size:36px}}
   </style>
 </head>
 <body><header>
-  <h1>PlayTubb</h1>
-  <p>India का अपना Video Sharing Platform – Hindi Creators के लिए</p>
-</header><section>
+  <div class="hero">
+    <div>
+      <div class="brand">
+        <!-- App Logo -->
+        <img src="logo.png" alt="PlayTubb Logo">
+        <h1>PlayTubb</h1>
+      </div>
+      <div class="tag">India का अपना Video Sharing Platform – Hindi Creators के लिए</div>
+      <div class="cta">
+        <a class="btn" href="#download">App Open</a>
+        <a class="btn out" href="#coming">Play Store – Coming Soon</a>
+      </div>
+      <p style="margin-top:14px">Watch. Upload. Grow.</p>
+    </div>
+    <div>
+      <!-- Cover / Feature Graphic -->
+      <img class="cover" src="cover.jpg" alt="PlayTubb Cover">
+    </div>
+  </div>
+</header><section id="about">
+  <span class="pill">About PlayTubb</span>
   <h2>PlayTubb क्या है?</h2>
   <p>
-    PlayTubb एक नया वीडियो प्लेटफॉर्म है जहाँ creators अपने talent को दिखा सकते हैं – 
-    short videos, reels और long videos के ज़रिये। हमारा मकसद है local और Hindi belt creators को आगे बढ़ाना।
+    PlayTubb.app एक नया, modern और creator‑first video platform है जहाँ creators अपने talent को बिना डर, बिना confusion और बिना unnecessary restriction के दुनिया के सामने रख सकते हैं।
+    हमारा focus खास तौर पर <b>Hindi belt, Bihar और Indian regional creators</b> पर है—जहाँ short videos, reels और long videos के ज़रिये creators अपनी पहचान बना सकें।
   </p>
-</section><section>
-  <h2>Key Features</h2>
-  <div class="features">
-    <div class="card"><h3>📹 Video Platform</h3><p>Shorts और long videos – एक ही app में।</p></div>
-    <div class="card"><h3>❤ Like & Comment</h3><p>Audience से direct engagement।</p></div>
-    <div class="card"><h3>🔔 Follow Creators</h3><p>अपने पसंदीदा creators को follow करें।</p></div>
-    <div class="card"><h3>🇮🇳 Made for India</h3><p>Hindi और regional creators पर focus।</p></div>
+  <p>
+    PlayTubb का mission simple है—<b>देखो, अपलोड करो और आगे बढ़ो</b>। हम चाहते हैं कि हर creator को fair reach मिले, audience से direct जुड़ाव मिले और आने वाले समय में transparent monetization के मौके मिलें।
+    यह platform beginners के लिए भी friendly है और serious creators के लिए powerful tools लाता है।
+  </p>
+  <div class="grid" style="margin-top:18px">
+    <div class="card"><h3>Creator First</h3><p>Creators की growth, reach और safety हमारी पहली priority है।</p></div>
+    <div class="card"><h3>India Focus</h3><p>Hindi और regional languages को center में रखकर बनाया गया platform।</p></div>
+    <div class="card"><h3>Fast & Clean</h3><p>Lightweight design, fast loading और distraction‑free experience।</p></div>
+    <div class="card"><h3>Future Ready</h3><p>Monetization, live streaming और creator dashboard coming soon।</p></div>
   </div>
-</section><section>
-  <h2>Coming Soon</h2>
-  <ul>
-    <li>Creator Monetization</li>
-    <li>Live Streaming</li>
-    <li>Local Ads & Promotions</li>
+</section><section id="features">
+  <h2>Key Features</h2>
+  <div class="grid">
+    <div class="card"><h3>📹 Shorts & Long Videos</h3><p>Reels style shorts से लेकर full length videos तक support।</p></div>
+    <div class="card"><h3>❤ Like, Comment, Follow</h3><p>Audience से direct engagement और community building।</p></div>
+    <div class="card"><h3>🔔 Creator Discovery</h3><p>New creators को discover करने के smart sections।</p></div>
+    <div class="card"><h3>🇮🇳 Made for India</h3><p>Indian creators और local trends के हिसाब से design।</p></div>
+  </div>
+</section><section id="download">
+  <h2>App Open</h2>
+  <p>अगर आपने app install कर रखा है तो सीधे app open करें।</p>
+  <div class="cta">
+    <a class="btn" href="playtubb://open">Open App</a>
+    <a class="btn out" href="#coming">Get on Play Store</a>
+  </div>
+  <p style="margin-top:10px">(Note: Deep link placeholder — app live होने पर auto काम करेगा)</p>
+</section><section id="coming">
+  <h2>Play Store – Coming Soon</h2>
+  <p>
+    PlayTubb.app बहुत जल्द Google Play Store पर available होगा। अभी हम early creators और users को onboard कर रहे हैं।
+    Launch के साथ ही बेहतर reach, creator tools और exciting updates आएँगे।
+  </p>
+  <div class="card">
+    <h3>📱 App Name on Play Store</h3>
+    <p><b>playtubb.app</b></p>
+  </div>
+</section><section id="help">
+  <h2>Help & Support</h2>
+  <p>किसी भी सवाल, suggestion या support के लिए हमसे संपर्क करें।</p>
+  <ul class="list">
+    <li>📧 Email: <b>playtubb.app@gmail.com</b></li>
+    <li>⏱ Response Time: 24–48 hours</li>
+    <li>🤝 Creators, brands और partners के लिए dedicated support</li>
   </ul>
-</section><div class="cta">
-  <h2>Become an Early Creator</h2>
-  <p>PlayTubb के साथ अपनी journey शुरू करें।</p>
-  <button>Notify Me</button>
-</div><footer>
-  © 2026 PlayTubb.app | All Rights Reserved
+</section><footer>
+  <p>© 2026 PlayTubb.app | Built for Indian Creators</p>
+  <p>Created by <b>Sagar Chaudhari</b></p>
 </footer></body>
 </html>
