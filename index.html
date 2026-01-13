@@ -207,8 +207,8 @@ h1, h2, h3 {
   /* ===== Early Creator Floating Button (FIXED + ANIMATED) ===== */
 .early-btn {
   position: fixed;
-  top: 400px;              /* 👈 hero se niche */
-  left: 10px;
+  top: 380px;              /* 👈 hero se niche */
+  left: 4px;
   z-index: 9999;
 
   background: linear-gradient(135deg, #f97316, #ef4444);
@@ -323,7 +323,7 @@ h1, h2, h3 {
 .animated-tag .emoji {
   display: inline-block;
   margin-right: 6px;
-  animation: emojiPulse 1.8s ease-in-out infinite;
+  animation: emojiPulse 1.9s ease-in-out infinite;
 }
 
 @keyframes emojiPulse {
@@ -336,7 +336,20 @@ h1, h2, h3 {
   100% {
     transform: scale(1);
   }
-}   
+}
+  /* ===== PlayTubb Title Animation ===== */
+.animated-title {
+  opacity: 0;
+  transform: scale(0.95) translateY(10px);
+  animation: titleReveal 1.2s ease-out forwards;
+}
+
+@keyframes titleReveal {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}  
   </style>
 </head>
   <script>
@@ -420,7 +433,7 @@ function toggleMenu() {
       <div class="brand">
         <!-- App Logo -->
         <img src="logo.png" alt="PlayTubb Logo">
-        <h1>PlayTubb</h1>
+        <h1 class="animated-title">PlayTubb</h1>
       </div>
       <div class="tag animated-tag">
   <span class="emoji">🚀</span>
@@ -522,6 +535,7 @@ PlayTubb केवल एक app नहीं, बल्कि Indian digital cr
 </a> 
 </body>
 </html>
+
 
 
 
