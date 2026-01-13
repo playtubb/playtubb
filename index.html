@@ -62,7 +62,25 @@ nav div:first-child {
     .brand h1{font-size:44px;line-height:1.1;margin:0}
     .tag{margin:10px 0 18px;color:var(--mut)}
     .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{padding:14px 22px;border-radius:14px;font-weight:600;background:linear-gradient(135deg,var(--pri),var(--pri2));border:none;color:white;box-shadow:0 12px 30px rgba(124,58,237,.35)}
+    ./* ===== Primary Buttons Glow ===== */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.45);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(236, 72, 153, 0.6);
+}
     .btn.out{background:transparent;border:1px solid rgba(255,255,255,.18)}
     .cover{width:100%;border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
     section{max-width:1200px;margin:auto;padding:56px 20px}
@@ -91,10 +109,19 @@ section {
   box-shadow: 0 25px 60px rgba(0,0,0,0.45);
 }
 
-/* ===== Headings Glow ===== */
+/* ===== Headings Premium Glow ===== */
 h1, h2, h3 {
-  color: #f8fafc;
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(99, 102, 241, 0.6),
+    0 0 25px rgba(168, 85, 247, 0.4);
+  letter-spacing: 0.5px;
 }
+  p {
+  color: #e5e7eb;
+  line-height: 1.8;
+  font-size: 16px;
+}   
     .card h3{margin:0 0 6px}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(124,58,237,.15);color:#ddd;border:1px solid rgba(124,58,237,.35);font-size:12px}
     .list li{margin:8px 0;color:var(--mut)}
@@ -275,6 +302,7 @@ h1, h2, h3 {
 </a> 
 </body>
 </html>
+
 
 
 
