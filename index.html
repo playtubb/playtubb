@@ -6,6 +6,44 @@
   <meta name="description" content="PlayTubb.app – Watch, Upload, Grow. Hindi & Indian creators ke liye modern video sharing platform." />
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
+    /* ===== Navigation Menu Styling ===== */
+nav {
+  background: linear-gradient(90deg, #0b1020, #121a3a);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  font-family: Arial, sans-serif;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+nav div:first-child {
+  color: #ffcc00;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  nav div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    margin: 4px 0;
+  }
+}
     :root{
       --bg:#0b1020;
       --card:#0f172a;
@@ -130,3 +168,4 @@
   <p>Created by <b>Sagar Chaudhari</b></p>
 </footer></body>
 </html>
+
