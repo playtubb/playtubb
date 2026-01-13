@@ -5,6 +5,35 @@
   <title>PlayTubb.app – Video Platform for India</title>
   <meta name="description" content="PlayTubb.app – Watch, Upload, Grow. Hindi & Indian creators ke liye modern video sharing platform." />
   <link rel="icon" type="image/png" href="favicon.png">
+  /* ===== FORCE HERO BUTTON FIX (Mobile + Desktop) ===== */
+.hero-buttons a {
+  display: inline-block !important;
+  padding: 12px 22px !important;
+  border-radius: 14px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* App Open Button */
+.hero-buttons .app-btn {
+  background: linear-gradient(135deg, #a855f7, #ec4899) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 25px rgba(168,85,247,0.45);
+}
+
+/* Play Store Button */
+.hero-buttons .store-btn {
+  background: rgba(255,255,255,0.08) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Hover Effect */
+.hero-buttons a:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
   <style>
     /* ===== Navigation Menu Styling ===== */
 nav {
@@ -302,6 +331,7 @@ h1, h2, h3 {
 </a> 
 </body>
 </html>
+
 
 
 
