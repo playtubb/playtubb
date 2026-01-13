@@ -304,6 +304,39 @@ h1, h2, h3 {
     display: block;
   }
 }
+ /* ===== Tagline Animation ===== */
+.animated-tag {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: tagFadeUp 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes tagFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Emoji subtle pulse */
+.animated-tag .emoji {
+  display: inline-block;
+  margin-right: 6px;
+  animation: emojiPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes emojiPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}   
   </style>
 </head>
   <script>
@@ -389,7 +422,10 @@ function toggleMenu() {
         <img src="logo.png" alt="PlayTubb Logo">
         <h1>PlayTubb</h1>
       </div>
-      <div class="tag">India का अपना Video Sharing Platform – Hindi Creators के लिए</div>
+      <div class="tag animated-tag">
+  <span class="emoji">🚀</span>
+  India का Next-Gen Platform to Watch, Upload & Grow
+</div>
       <div class="cta">
         <div class="hero-buttons">
   <a href="#app" class="app-btn">
@@ -486,6 +522,7 @@ PlayTubb केवल एक app नहीं, बल्कि Indian digital cr
 </a> 
 </body>
 </html>
+
 
 
 
