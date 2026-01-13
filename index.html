@@ -117,6 +117,43 @@ nav div:first-child {
     p{color:var(--mut)}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
     .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px}
+    /* ===== Play Store Coming Soon Badge ===== */
+.store-btn {
+  position: relative;
+  overflow: visible;
+}
+
+/* Badge */
+.store-btn::after {
+  content: "Coming Soon";
+  position: absolute;
+  top: -10px;
+  right: -12px;
+  background: linear-gradient(135deg, #f97316, #ef4444);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(239,68,68,0.6);
+  animation: pulseBadge 1.6s infinite;
+}
+
+/* Animation */
+@keyframes pulseBadge {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(239,68,68,0.6);
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 18px rgba(239,68,68,0.9);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(239,68,68,0.6);
+  }
+}
     /* ===== FINAL PREMIUM BACKGROUND ===== */
 body {
   background: linear-gradient(180deg, #1a1f36, #2b1055) !important;
@@ -340,6 +377,7 @@ h1, h2, h3 {
 </a> 
 </body>
 </html>
+
 
 
 
