@@ -236,6 +236,10 @@ h1, h2, h3 {
     transform: translateY(0) scale(1);
   }
 }
+ /* ===== Replay animation trigger ===== */
+.logo-text.replay span {
+  animation-name: gradientMove, letterPop;
+}   
     /* ===== Hamburger Menu ===== */
 .hamburger {
   display: none;
@@ -261,7 +265,7 @@ h1, h2, h3 {
 .mobile-menu {
   position: fixed;
   top: 70px;
-  left: 20px;
+  right: 20px;
   width: 220px;
   background: #020617;
   border-radius: 16px;
@@ -350,6 +354,71 @@ h1, h2, h3 {
     transform: scale(1) translateY(0);
   }
 }  
+/* ===== PlayTubb Gradient Text Animation ===== */
+.logo-text {
+  font-size: 44px;
+  font-weight: 800;
+  display: inline-flex;
+  gap: 2px;
+}
+
+.logo-text span {
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #ec4899,
+    #22d3ee
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s infinite linear,
+             letterPop 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Letter-by-letter delay */
+.logo-text span:nth-child(1){animation-delay:0s}
+.logo-text span:nth-child(2){animation-delay:.08s}
+.logo-text span:nth-child(3){animation-delay:.16s}
+.logo-text span:nth-child(4){animation-delay:.24s}
+.logo-text span:nth-child(5){animation-delay:.32s}
+.logo-text span:nth-child(6){animation-delay:.40s}
+.logo-text span:nth-child(7){animation-delay:.48s}
+.logo-text span:nth-child(8){animation-delay:.56s}
+
+/* Animations */
+@keyframes gradientMove {
+  0% {background-position:0% 50%}
+  100% {background-position:100% 50%}
+}
+
+@keyframes letterPop {
+  from {
+    transform: translateY(12px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+  /* ===== Logo Sync Animation ===== */
+.logo-anim {
+  animation: logoFade 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes logoFade {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}  
   </style>
 </head>
   <script>
@@ -390,6 +459,24 @@ h1, h2, h3 {
       }
     });
   });
+  <script>
+const logoText = document.querySelector(".logo-text");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        logoText.classList.remove("replay");
+        void logoText.offsetWidth; // reset
+        logoText.classList.add("replay");
+      }
+    });
+  },
+  { threshold: 0.6 }
+);
+
+observer.observe(logoText);
+</script>  
 </script>
  <script>
 function toggleMenu() {
@@ -432,8 +519,11 @@ function toggleMenu() {
     <div>
       <div class="brand">
         <!-- App Logo -->
-        <img src="logo.png" alt="PlayTubb Logo">
-        <h1 class="animated-title">PlayTubb</h1>
+        <img src="logo.png" alt="PlayTubb Logo" class="logo-anim">
+        <h1 class="logo-text">
+  <span>P</span><span>l</span><span>a</span><span>y</span>
+  <span>T</span><span>u</span><span>b</span><span>b</span>
+</h1>
       </div>
       <div class="tag animated-tag">
   <span class="emoji">🚀</span>
@@ -535,6 +625,7 @@ PlayTubb केवल एक app नहीं, बल्कि Indian digital cr
 </a> 
 </body>
 </html>
+
 
 
 
