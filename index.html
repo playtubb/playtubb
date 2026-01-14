@@ -477,30 +477,7 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(logoText);
-</script>  
-  </script>
-/* ===== Section Scroll Animation (NEW) ===== */
-const sections = document.querySelectorAll("section");
-
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
-
-sections.forEach((section, index) => {
-  if (index % 3 === 0) section.classList.add("from-left");
-  else if (index % 3 === 1) section.classList.add("from-right");
-  else section.classList.add("from-bottom");
-
-  sectionObserver.observe(section);
-});
-</script>    
+</script>     
 </script> 
 function toggleMenu() {
   const menu = document.getElementById("mobileMenu");
@@ -648,6 +625,7 @@ PlayTubb केवल एक app नहीं, बल्कि Indian digital cr
 </a> 
 </body>
 </html>
+
 
 
 
