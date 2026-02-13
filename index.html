@@ -784,17 +784,17 @@ observer.observe(logoText);
   <div class="grid">
 
     <div class="card" style="text-align:center">
-      <h3 class="counter" data-target="100">0</h3>
+      <h3 class="counter" data-target="100" data-suffix="K+">0</h3>
       <p>Early Creators Joined</p>
     </div>
 
     <div class="card" style="text-align:center">
-      <h3 class="counter" data-target="50">0</h3>
+      <h3 class="counter" data-target="50" data-suffix="K+">0</h3>
       <p>Monthly Visits</p>
     </div>
 
     <div class="card" style="text-align:center">
-      <h3 class="counter" data-target="25">0</h3>
+      <h3 class="counter" data-target="25" data-suffix="+">0</h3>
       <p>Indian States Reached</p>
     </div>
 
@@ -1083,10 +1083,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateCount();
   });
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".counter");
+
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    const suffix = counter.getAttribute("data-suffix") || "";
+    let count = 0;
+
+    const update = () => {
+      const increment = target / 80;
+
+      if (count < target) {
+        count += increment;
+        counter.innerText = Math.floor(count) + suffix;
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target + suffix;
+      }
+    };
+
+    update();
+  });
 });
+</script>
 </script>
 </body>
 </html>
+
 
 
 
