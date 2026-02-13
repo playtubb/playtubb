@@ -1067,23 +1067,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter");
 
   counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute("data-target");
-      const count = +counter.innerText;
+    const target = +counter.getAttribute("data-target");
+    const suffix = counter.getAttribute("data-suffix") || "";
+    let count = 0;
 
-      const increment = target / 100;
+    const update = () => {
+      const increment = target / 80;
 
       if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 20);
+        count += increment;
+        counter.innerText = Math.floor(count) + suffix;
+        requestAnimationFrame(update);
       } else {
-        counter.innerText = target + "+";
+        counter.innerText = target + suffix;
       }
     };
 
-    updateCount();
+    update();
   });
-<script>
+});
+</script>
 document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter");
 
@@ -1111,6 +1114,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 </body>
 </html>
+
 
 
 
