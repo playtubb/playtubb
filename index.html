@@ -1061,32 +1061,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(updateLiveTime, 1000);
   updateLiveTime();
 });  
-</script>
-   <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const counters = document.querySelectorAll(".counter");
-
-  counters.forEach(counter => {
-    const target = +counter.getAttribute("data-target");
-    const suffix = counter.getAttribute("data-suffix") || "";
-    let count = 0;
-
-    const update = () => {
-      const increment = target / 80;
-
-      if (count < target) {
-        count += increment;
-        counter.innerText = Math.floor(count) + suffix;
-        requestAnimationFrame(update);
-      } else {
-        counter.innerText = target + suffix;
-      }
-    };
-
-    update();
-  });
-});
-</script>
+</script>  
 document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter");
 
@@ -1114,6 +1089,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 </body>
 </html>
+
 
 
 
