@@ -1042,8 +1042,29 @@ setInterval(updateLiveTime, 1000);
 updateLiveTime();
 </script>
 </script> 
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  function updateLiveTime() {
+    const now = new Date();
+    const time = now.toLocaleTimeString("en-IN", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit"
+    });
+
+    const liveElement = document.getElementById("liveTime");
+    if (liveElement) {
+      liveElement.innerText = time;
+    }
+  }
+
+  setInterval(updateLiveTime, 1000);
+  updateLiveTime();
+});
+</script>
 </body>
 </html>
+
 
 
 
