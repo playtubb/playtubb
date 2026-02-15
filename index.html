@@ -488,7 +488,10 @@ h1, h2, h3 {
       e.preventDefault();
       const target = document.querySelector(link.getAttribute("href"));
       if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
+        window.scrollTo({
+  top: target.offsetTop - 120,
+  behavior: "smooth"
+});
       }
     });
   });
@@ -1090,6 +1093,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 </body>
 </html>
+
 
 
 
